@@ -3,7 +3,7 @@ import HelloWorld from "./HelloWorld";
 
 class App extends Component {
   state = {
-    tech: "React"
+    tech: "Redux"
   };
   render() {
     return <HelloWorld tech={this.state.tech} />;
