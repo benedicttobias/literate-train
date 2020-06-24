@@ -1,18 +1,11 @@
 import React, { Component } from "react";
-import HelloWorld from "./HelloWorld";
-import { createStore } from "redux";
-import reducer from "./reducers";
+import ThemePicker from "./themePicker";
+import Store from "./store";
 
-const initialState = {
-  tech: "React"
-}
+const App = props => {
+  const store = Store;
 
-const store = createStore(reducer, initialState);
-
-class App extends Component {
-  render() {
-    return <HelloWorld tech={store.getState().tech} />;
-  }
+  return <ThemePicker store={store}/>;
 }
 
 export default App;
