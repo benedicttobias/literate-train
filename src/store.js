@@ -2,7 +2,8 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 
 const Store = createStore(reducers, {
-    theme: 'light'
+    theme: 'light',
+    brightness: '100'
 })
 
 Store.subscribe(() => {
