@@ -7,8 +7,4 @@ const Store = createStore(reducers, {
     brightness: '100'
 }, applyMiddleware(logger));
 
-Store.subscribe(() => {
-    console.log("store updated", Store.getState())
-})
-
 export default Store;
