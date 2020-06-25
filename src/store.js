@@ -4,8 +4,11 @@ import logger from 'redux-logger';
 import LocaleReducer from './reducers/localeReducer';
 
 const Store = createStore(
-    combineReducers({ThemeReducer, LocaleReducer}), 
-    {}, 
+    combineReducers({
+        ThemeReducer,
+        LocaleReducer
+    }), 
+    {}, // initial states 
     applyMiddleware(logger));
 
 export default Store;

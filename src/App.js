@@ -1,11 +1,10 @@
 import React from "react";
-import ThemePicker from "./themePicker";
-import Store from "./store";
-import LocalePicker from "./localePicker";
+import ThemePicker from "./containers/themePicker";
+import store from "./store";
+import LocalePicker from "./containers/localePicker";
 import { Provider } from 'react-redux';
 
 const App = props => {
-  const store = Store;
 
   return (
     <Provider store={store}>

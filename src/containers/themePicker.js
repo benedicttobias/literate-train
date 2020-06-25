@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import { setTheme } from '../actions/themeActions';
 
 const ThemePicker = props => {
     const themeState = useSelector(state => state.ThemeReducer, shallowEqual);
@@ -8,8 +9,8 @@ const ThemePicker = props => {
 return (
     <>
         <span>{themeState.theme}</span>
-        <button onClick={() => themeDispatch({type:'SET_THEME', payload: 'light'})}>Light</button>
-        <button onClick={() => themeDispatch({type:'SET_THEME', payload: 'dark'})}>Dark</button>
+        <button onClick={() => themeDispatch(setTheme('light'))}>Light</button>
+        <button onClick={() => themeDispatch(setTheme('dark'))}>Dark</button>
     </>
 )
 }
