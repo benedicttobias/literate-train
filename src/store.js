@@ -3,6 +3,7 @@ import ThemeReducer from './reducers/themeReducer';
 import logger from 'redux-logger';
 import LocaleReducer from './reducers/localeReducer';
 import thunk from 'redux-thunk';
+import promise from 'redux-promise-middleware';
 
 const Store = createStore(
     combineReducers({
@@ -10,7 +11,7 @@ const Store = createStore(
         LocaleReducer
     }), 
     {}, // initial states 
-    applyMiddleware(logger, thunk)
+    applyMiddleware(logger, thunk, promise)
 );
 
 export default Store;
