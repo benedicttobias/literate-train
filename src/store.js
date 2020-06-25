@@ -1,10 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
-
-const logger = (store) => (next) => (action) => {
-    console.log("Store received action", action);
-    next(action);
-};
+import logger from 'redux-logger';
 
 const Store = createStore(reducers, {
     theme: 'light',
