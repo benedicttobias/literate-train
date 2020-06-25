@@ -1,11 +1,14 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 const LocalePicker = props => {
-    const store = props.store;
+    const localeState = useSelector(state => state.LocaleReducer);
+    const dispatch = useDispatch();
     return (
         <>
-            <button onClick={() => store.dispatch({type: 'SET_LOCALE', payload: 'en'})}>English</button>
-            <button onClick={() => store.dispatch({type: 'SET_LOCALE', payload: 'es'})}>Spanish</button>
+            <span>{localeState.locale}</span>
+            <button onClick={() => dispatch({type: 'SET_LOCALE', payload: 'en'})}>English</button>
+            <button onClick={() => dispatch({type: 'SET_LOCALE', payload: 'es'})}>Spanish</button>
         </>
     )
 
