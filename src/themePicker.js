@@ -8,8 +8,8 @@ let ThemePicker = props => {
     return (
         <>
             <span>{theme}</span>
-            <button onClick={() => store.dispatch({type: 'CHANGE_THEME', payload: 'light'})}>Light</button>
-            <button onClick={() => store.dispatch({type: 'CHANGE_THEME', payload: 'dark'})}>Dark</button>
+            <button onClick={() => store.dispatch({type: 'SET_THEME', payload: 'light'})}>Light</button>
+            <button onClick={() => store.dispatch({type: 'SET_THEME', payload: 'dark'})}>Dark</button>
         </>
     )
 }

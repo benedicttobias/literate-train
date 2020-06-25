@@ -1,10 +1,11 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware , combineReducers } from 'redux';
 import ThemeReducer from './reducers/themeReducer';
 import logger from 'redux-logger';
+import LocaleReducer from './reducers/localeReducer';
 
-const Store = createStore(ThemeReducer, {
-    theme: 'light',
-    brightness: '100'
-}, applyMiddleware(logger));
+const Store = createStore(
+    combineReducers({ThemeReducer, LocaleReducer}), 
+    {}, 
+    applyMiddleware(logger));
 
 export default Store;

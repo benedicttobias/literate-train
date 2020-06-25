@@ -1,11 +1,14 @@
 import React from 'react';
 
 const LocalePicker = props => {
-    return
-    <>
-        <button>English</button>
-        <button>Spanish</button>
-    </>
+    const store = props.store;
+    return (
+        <>
+            <button onClick={() => store.dispatch({type: 'SET_LOCALE', payload: 'en'})}>English</button>
+            <button onClick={() => store.dispatch({type: 'SET_LOCALE', payload: 'es'})}>Spanish</button>
+        </>
+    )
+
 }
 
 export default LocalePicker;

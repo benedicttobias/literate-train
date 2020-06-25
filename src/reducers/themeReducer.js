@@ -1,6 +1,8 @@
-const ThemeReducer = (state, action) => {
+const ThemeReducer = (state = {
+    theme: 'light'
+}, action) => {
     switch(action.type){
-        case "CHANGE_THEME":
+        case "SET_THEME":
             if (action.payload === 'light'){
                 state = {
                     ...state,
