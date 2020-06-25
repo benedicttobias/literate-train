@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ThemePicker from "./themePicker";
 import Store from "./store";
 

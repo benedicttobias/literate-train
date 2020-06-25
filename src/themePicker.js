@@ -1,13 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {connect} from 'react-redux';
 
 let ThemePicker = props => {
     const store = props.store;
-    const [theme, setTheme] = useState(store.getState().theme);
-
-    useEffect(() => {
-        setTheme(store.getState().theme);
-    }, [store.getState().theme]);
+    const [theme] = useState(store.getState().theme);
 
     return (
         <>
