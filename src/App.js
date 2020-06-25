@@ -5,7 +5,9 @@ import Store from "./store";
 const App = props => {
   const store = Store;
 
-  return <ThemePicker store={store}/>;
+  return (
+    <ThemePicker store={store} />
+  )
 }
 
 export default App;

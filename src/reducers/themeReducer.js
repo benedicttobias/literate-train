@@ -1,4 +1,4 @@
-export default (state, action) => {
+const ThemeReducer = (state, action) => {
     switch(action.type){
         case "CHANGE_THEME":
             if (action.payload === 'light'){
@@ -19,3 +19,5 @@ export default (state, action) => {
     
     return state;
 }
+
+export default ThemeReducer;
